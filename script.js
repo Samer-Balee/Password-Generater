@@ -30,13 +30,32 @@ var generatePassword = function() {
 
   }
 
+  
+  var allCharacters = "";
+
+  var  includeLowerCase = window.confirm("Click OK, if you would like to include lower Case letters.");
+
+  if (includeLowerCase) {
+
+    allCharacters += lowerCaseLeters;
+  }
+
+
+  var  includeUpperCase = window.confirm("Click OK, if you would like to include upper Case letters.");
+
+  if (includeUpperCase) {
+
+    allCharacters = allCharacters.concat("" , upperCaseLeters);
+   
+  }
+
   var result = "";
 
   for (var i = 0 ; i < userNumChoice ; i ++ ) {
 
-    var index = Math.floor(Math.random() * lowerCaseLeters.length);
+    var index = Math.floor(Math.random() * allCharacters.length);
 
-    result += lowerCaseLeters[index];
+    result += allCharacters[index];
   }
   return result;
 
