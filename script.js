@@ -1,13 +1,19 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var characters = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
+var lowerCaseLeters = "abcdefghijklmnopqrstuvxyz";
+
+var upperCaseLeters = lowerCaseLeters.toLocaleUpperCase();
+
+var numericCharacters = "0123456789";
+
+var symbolCharacters = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
 
 var generatePassword = function() {
 
   var userNumChoice = window.prompt( "choose number of charactors");
-
+  
   if (isNaN(userNumChoice)) {
 
    window.alert(" Please choose avalid number ");
@@ -16,7 +22,7 @@ var generatePassword = function() {
 
   }
 
-  if ( userNumChoice < '8' && userNumChoice > '128') {
+  if ( userNumChoice < 8 || userNumChoice > 128) {
 
     window.alert("Choose number of charactors between 8 to 128 ");
 
@@ -27,8 +33,10 @@ var generatePassword = function() {
   var result = "";
 
   for (var i = 0 ; i < userNumChoice ; i ++ ) {
-    var index = Math.floor(Math.random() * characters.length);
-    result += characters[index]
+
+    var index = Math.floor(Math.random() * lowerCaseLeters.length);
+
+    result += lowerCaseLeters[index];
   }
   return result;
 
