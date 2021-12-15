@@ -42,7 +42,7 @@ GitHub link : [Samer-Balee](https://github.com/Samer-Balee/Password-Generater).
 
  . Inspect your code ![alt text](images/screenshot-inspect.PNG)
 
- <!-- . Conditions to guarantee including one charactor of each string ![alt text]() -->
+ . Conditions to guarantee including one charactor of each string ![alt text](images/screenshot-conditions.PNG)
 
 
 
