@@ -28,7 +28,7 @@ Please use the following link to view the web page after modification : [GitHub 
 
 GitHub link : [Samer-Balee](https://github.com/Samer-Balee/Password-Generater).
 
-## Usfull Resourses
+## Usefull Resourses
 
 . [MDN WEB DOCS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
