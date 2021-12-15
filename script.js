@@ -2,31 +2,37 @@
 var generateBtn = document.querySelector("#generate");
 
 var characters = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
-// var resultPassword = [];
+
 
 var generatePassword = function() {
 
-  var userChoice = window.prompt( "choose number of charactors");
+  var userNumChoice = window.prompt( "choose number of charactors");
 
-  if (isNaN(userChoice)) {
+  if (isNaN(userNumChoice)) {
 
-   window.alert(" Please choose avalid number ")
+   window.alert(" Please choose avalid number ");
 
    return generatePassword();
 
   }
+
+  if ( userNumChoice < '8' && userNumChoice > '128') {
+
+    window.alert("Choose number of charactors between 8 to 128 ");
+
+    return generatePassword();
+
+  }
+
   var result = "";
 
-  for (var i = 0 ; i < userChoice ; i ++ ) {
+  for (var i = 0 ; i < userNumChoice ; i ++ ) {
     var index = Math.floor(Math.random() * characters.length);
     result += characters[index]
   }
   return result;
 
-  // var numPassword = Math.floor(Math.random() * userChoice);
-
-  // var passwor
-
+ 
 };
 
 // Write password to the #password input
