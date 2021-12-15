@@ -12,11 +12,11 @@ var symbolCharacters = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
 var generatePassword = function() {
 
-  var userNumChoice = window.prompt( "choose number of charactors");
+  var userNumChoice = window.prompt( "Choose number of charactors between 8 to 128.");
   
   if (isNaN(userNumChoice)) {
 
-   window.alert(" Please choose avalid number ");
+   window.alert(" Please enter avalid number ");
 
    return generatePassword();
 
@@ -24,7 +24,7 @@ var generatePassword = function() {
 
   if ( userNumChoice < 8 || userNumChoice > 128) {
 
-    window.alert("Choose number of charactors between 8 to 128 ");
+    window.alert("Please choose a number between 8 to 128 ");
 
     return generatePassword();
 
@@ -48,6 +48,23 @@ var generatePassword = function() {
     allCharacters = allCharacters.concat("" , upperCaseLeters);
    
   }
+
+  var  includeNumbers = window.confirm("Click OK, if you would like to include numbers.");
+
+  if (includeNumbers) {
+
+    allCharacters = allCharacters.concat("" , numericCharacters);
+   
+  }
+
+  var  includeSymbols = window.confirm("Click OK, if you would like to include symbol charaters.");
+
+  if (includeSymbols) {
+
+    allCharacters = allCharacters.concat("" , symbolCharacters);
+   
+  }
+ 
 
   var result = "";
 
