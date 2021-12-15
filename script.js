@@ -69,15 +69,44 @@ var generatePassword = function() {
 
   var result = ""; // empty string for generate password
 
-  for (var i = 0 ; i < userNumChoice ; i ++ ) { //for loop to choose random charactor from all charactors string
-
-    var index = Math.floor(Math.random() * allCharacters.length); // using math.random function
-
-    result += allCharacters[index]; // adding the chosen charactor to passwoord string
+ // condition to guarantee including at least one charactor of each string 
+  if (
+    (userNumChoice >= 8 && userNumChoice <= 15) && // if the user confirmed all choices
+    (includeLowerCase === true) &&
+    (includeUpperCase === true) &&
+    (includeNumbers === true) &&
+    (includeSymbols === true ) 
+) {
+ // loop to pick one charactor of each string
+  for (var i = 0 ; i < 1 ; i ++ ) {
+  var lowerIndex = Math.floor(Math.random() * lowerCaseLeters.length);
+  var upperIndex = Math.floor(Math.random() * upperCaseLeters.length);
+  var numericIndex = Math.floor(Math.random() * numericCharacters.length);
+  var symboleIndex = Math.floor(Math.random() * symbolCharacters.length);
   }
-  return result; // returning the result
-
+  // adding random charactors to result
+  result += lowerCaseLeters[lowerIndex]
+  result += upperCaseLeters[upperIndex]
+  result += numericCharacters[numericIndex]
+  result += symbolCharacters[symboleIndex]
  
+  // loop to complete remaining password charactors
+  for (var i = 0 ; i < (userNumChoice - 4) ; i ++ ) { 
+    var index = Math.floor(Math.random() * allCharacters.length );
+    result += allCharacters[index]
+  }
+  
+} else {
+ // if one of the user choices is not true
+ // use this loop to create random characters
+    for (var i = 0 ; i < (userNumChoice) ; i ++ ) {
+    var index = Math.floor(Math.random() * allCharacters.length );
+    result += allCharacters[index]
+  }
+}
+return result;
+
+
 };
 
 // Write password to the #password input

@@ -14,9 +14,9 @@ We need to modify starter code to create an application that enables employees t
 
 3- Add variable strings for all possible charactors.
 
-4- Work with user choices by using prompt(), alert() and confirm().
+4- Work with user choices by using .prompt(), .alert() and .confirm().
 
-5- join strings of characters after each of user choice by using ( += ) or ( .concat).
+5- Join strings of characters after each of user choices by using ( += ) or ( .concat).
 
 6- After completing all user choices, use for loop and math.random to create the password depending on number of charactors the user chose.
 
@@ -41,6 +41,8 @@ GitHub link : [Samer-Balee](https://github.com/Samer-Balee/Password-Generater).
  . Using for loop ![alt text](images/screenshot-for-loop.PNG)
 
  . Inspect your code ![alt text](images/screenshot-inspect.PNG)
+
+ <!-- . Conditions to guarantee including one charactor of each string ![alt text]() -->
 
 
 
