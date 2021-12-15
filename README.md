@@ -32,7 +32,15 @@ GitHub link : [Samer-Balee](https://github.com/Samer-Balee/Password-Generater).
 
 . [MDN WEB DOCS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
+## Usage
 
+ . Breaking down the code ![alt text](images/screenshot-number-of-charactors.PNG)
+
+ . Working on user choices ![alt text](images/screenshot-user-choices.PNG)
+
+ . Using for loop ![alt text](images/screenshot-for-loop.PNG)
+
+ . Inspect your code ![alt text](images/screenshot-inspect.PNG)
 
 
 
